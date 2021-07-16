@@ -29,29 +29,35 @@ function operate (operator, number1, number2) {
     }
 };
 
-document.querySelectorAll('.num-btn').forEach(btn => btn.addEventListener('click', function(){
+function pressedNumber() {
     if (switchNumbers) {
         displayContent.textContent = "";
         switchNumbers = false;};
     let numberPressed = this.textContent;
     displayContent.textContent += numberPressed;
-}))
+};
 
-document.querySelectorAll('.operator').forEach(op => op.addEventListener('click', function(){
-   operator = this.dataset.operator;
-   number1 = parseInt(displayContent.textContent, 10);
-   if (number1) {switchNumbers = true};
-}));
+function pressedOperator() {
+    operator = this.dataset.operator;
+    number1 = parseInt(displayContent.textContent, 10);
+    if (number1) {switchNumbers = true};
+};
 
-document.querySelector('.enter').addEventListener('click', function (){
+function pressedEqual() {
     number2 = parseInt(displayContent.textContent, 10);
     let result = operate(operator, number1, number2);
     displayContent.textContent = result;
-    number1 = result;});
+    number1 = result;
+};
 
-document.querySelector('.clear').addEventListener('click', function(){
+function pressedClear() {
     displayContent.textContent = "";
     number1 = undefined;
     number2 = undefined;
     operator = undefined;
-})
+}
+
+document.querySelectorAll('.num-btn').forEach(btn => btn.addEventListener('click', pressedNumber));
+document.querySelectorAll('.operator').forEach(op => op.addEventListener('click', pressedOperator));
+document.querySelector('.enter').addEventListener('click', pressedEqual);
+document.querySelector('.clear').addEventListener('click', pressedClear);

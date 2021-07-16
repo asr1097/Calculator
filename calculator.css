@@ -1,9 +1,10 @@
 .container {
-    height: 100vh;
-    margin: 150px;
-    top: 50%;
-    left: 50%;
-    translate: (-50%, -50%);
+    height: 50vh;
+    width: 600px;
+    margin: auto;
+    margin-top: 130px;
+    
+    
 }
 
 .calculator {
@@ -41,11 +42,23 @@
     grid-column-end: -2;
 }
 
-.num-btn {
-    height: inherit;
-    width: 50%;
+.op-div-container {
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: span 4;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
-
+.op {
+    display: flex;
+    justify-content: center;
+}
+.op-btn, .num-btn {
+    height: 80px;
+    width: 80px;
+}
 p {
     text-align: right;
 }

@@ -3,6 +3,9 @@
     <head>
         <title>Calculator</title>
         <link rel="stylesheet" href="calculator.css">
+        <style>     
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+        </style>
     </head>
     <body>
         <div class="container">
@@ -10,7 +13,7 @@
                 <div class="display">
                     <p class='display-content'></p>
                 </div>
-                <div class='num-div-container'>
+                <div class='btn-div-container'>
                     <div class='btn-1 num-div'>
                         <button class="num-1 num-btn">1</button>
                     </div>
@@ -41,25 +44,23 @@
                     <div class='btn-0 num-div'>
                         <button class="num-0 num-btn">0</button>
                     </div>
-                </div>
-                <div class='op-div-container'>
-                    <div class='op'>
+                    <div class='op plus'>
                         <button class='op-btn operator' data-operator='+'>+</button>
                     </div>
-                    <div class='op'>
+                    <div class='op minus'>
                         <button class='op-btn operator' data-operator='-'>-</button>
                     </div>
-                    <div class='op'>
+                    <div class='op multi'>
                         <button class='op-btn operator' data-operator='*'>*</button>
                     </div>
-                    <div class='op'>
+                    <div class='op divide'>
                         <button class='op-btn operator' data-operator='/'>/</button>
                     </div>
-                    <div class='op'>
-                        <button class='enter op-btn'>=</button>
+                    <div class='op enter'>
+                        <button class='enter-btn op-btn'>=</button>
                     </div>
-                    <div class='op'>
-                        <button class='clear op-btn'>Clear</button>
+                    <div class='op clear'>
+                        <button class='clear-btn op-btn'>Clear</button>
                     </div>
                 </div>
             </div>

@@ -1,64 +1,131 @@
+
 .container {
-    height: 50vh;
-    width: 600px;
+    display: flex;
+    height: 325px;
+    width: 400px;
     margin: auto;
     margin-top: 130px;
-    
-    
+    justify-content: center;
 }
 
 .calculator {
-    display: grid;
     height: inherit;
     width: inherit;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .display {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    display: flex;
+    justify-content:flex-end;
     border-style: solid;
     border-color: black;
+    border-width: 5px;
+    border-bottom: 0;
+    height: 60px;
+    width: inherit;
+    background-color: rgb(206, 206, 206);
 }
 
-.num-div-container {
+.btn-div-container {
+    height: inherit;
+    width: inherit;
     display: grid;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: span 4;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    background-color: rgb(65, 65, 65);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
 }
 
-.num-div {
+.num-div, .op {
     display: flex;
     justify-content: center;
+    height: 50px;
 }
 
 .btn-0 {
-    grid-column-start: -3;
-    grid-column-end: -2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+}
+.btn-4, .btn-5, .btn-6 {
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
-.op-div-container {
-    display: grid;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: span 4;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+.btn-7, .btn-8, .btn-9 {
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
-.op {
-    display: flex;
-    justify-content: center;
+
+.plus{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+.minus {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+.multi {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.divide {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 5;
+    grid-column-end: 6;   
+}
+.enter {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+.clear {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 5;
 }
 .op-btn, .num-btn {
     height: 80px;
     width: 80px;
+    border-radius: 5px;
+    padding: 0;
+    border-width: 1px;
+    font-size: 30px;
 }
+.op-btn {
+    background-color: rgb(80, 80, 80);
+}
+.num-btn {
+    background-color: rgb(160, 160, 160);
+}
+.enter-btn, .clear-btn {
+    height: 160px;
+}
+.enter-btn {
+    background-color: rgb(0, 0, 126);
+}
+.clear-btn {
+    background-color: red;
+}
+
 p {
     text-align: right;
+    font-size: 40px;
+    margin-top: 5px;
+    font-family: 'Orbitron', sans-serif;
 }
+
